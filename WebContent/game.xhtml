@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+      <html lang= "en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+<head>
+  <title>Blackjack</title>
+</head>
+
+<body>
+Welcome to the game, please select the number of CPU's you wish to play against (Max of 5, min of 1 (Dealer))
+<br/>
+<h:form> 
+Number of CPU's: 
+<h:selectOneMenu value = "#{gameController.numberOfPlayers}">
+			<f:selectItems itemValue = "5" itemLabel = "5"/>		
+			<f:selectItems itemValue = "4" itemLabel = "4"/>		
+			<f:selectItems itemValue = "3" itemLabel = "3"/>		
+			<f:selectItems itemValue = "2" itemLabel = "2"/>		
+			<f:selectItems itemValue = "1" itemLabel = "1"/>			
+</h:selectOneMenu>
+<br/>
+<h:commandButton value = "Start Game" action = "startgame"/>
+</h:form>
+</body>
+
+</html>
